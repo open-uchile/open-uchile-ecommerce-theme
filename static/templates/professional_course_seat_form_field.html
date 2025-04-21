@@ -1,0 +1,58 @@
+<div class="col-sm-12">
+    <div class="seat-type">Educación Profesional</div>
+</div>
+<div class="col-sm-4">
+    <input type="hidden" name="certificate_type" value="professional">
+
+    <div class="seat-price">
+        <div class="form-group">
+            <label for="price">Precio (en CLP)</label>
+
+            <div class="input-group">
+                <div class="input-group-addon">$</div>
+                <input type="number" class="form-control" name="price" id="price" min="5" step="1" pattern="\d+"
+                       value="<%= price %>">
+            </div>
+            <!-- NOTE: This help-block is here for validation messages. -->
+            <span class="help-block"></span>
+        </div>
+    </div>
+
+    <div class="expires">
+        <div class="form-group">
+            <label for="expires">Fecha límite para la actualización</label>
+
+            <div class="input-group" data-toggle="tooltip"
+                 title="Los cursos de formación profesional no tienen fecha límite de actualización.">
+                <div class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+                <input id="expires" name="expires" class="form-control add-pikaday"
+                       aria-describedby="expiresHelpBlock" disabled="disabled">
+            </div>
+            <!-- NOTE: This help-block is here for validation messages. -->
+            <span class="help-block"></span>
+        <span id="expiresHelpBlock" class="help-block">
+            Después de esta fecha/hora, los estudiantes ya no podrán matricularse en esta vía.
+        </span>
+        <span class="help-block">
+            Cambie la fecha límite de actualización para este curso. La fecha límite por defecto es 10 días antes de la fecha y hora de finalización del curso.
+        </span>
+        </div>
+    </div>
+</div>
+<div class="col-sm-4 seat-certificate-type">
+    Certificado de Educación Profesional
+</div>
+<div class="col-sm-4 seat-additional-info">
+    <div class="form-group">
+        <label for="id_verification_required">¿Verificación de ID requerida?</label>
+
+        <div class="input-group">
+            <label class="radio-inline">
+                <input type="radio" name="id_verification_required" value="true"> Yes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="id_verification_required" value="false"> No
+            </label>
+        </div>
+    </div>
+</div>
